@@ -39,11 +39,10 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-
       	
     - name: Generate JaCoCo coverage report
       run: mvn jacoco:report
-     
+      
     - name: jacoco-reporter
       uses: PavanMudigonda/jacoco-reporter@v5.0
       with:
